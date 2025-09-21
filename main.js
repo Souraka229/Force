@@ -1,5 +1,12 @@
 import { supabase } from './supabaseClient.js'
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
 
+// Remplacez ces valeurs par les vôtres
+const supabaseUrl = 'https://rvkurtvyxwcehapzhirm.supabase.co'
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ2a3VydHZ5eHdjZWhhcHpoaXJtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg0NTM0MTAsImV4cCI6MjA3NDAyOTQxMH0.3h_JEBWAwLNODRzh-ysd9fg0IwgviiQQGgTN-A4pxKA'
+
+// Création du client Supabase
+export const supabase = createClient(supabaseUrl, supabaseKey)
 const emailInput = document.getElementById('email')
 const passwordInput = document.getElementById('password')
 const signupBtn = document.getElementById('signupBtn')
